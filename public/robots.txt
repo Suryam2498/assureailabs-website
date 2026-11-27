@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://assureailabs.netlify.app/sitemap.xml

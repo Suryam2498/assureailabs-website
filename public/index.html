@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AssureAI Labs | Automate Manual Work with AI</title>
 <link rel="icon" type="image/png" href="favicon.png">
+<meta name="theme-color" content="#031a3f">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AssureAI Labs">
+<meta property="og:title" content="AssureAI Labs | Automate Manual Work with AI">
+<meta property="og:description" content="Wherever there is manual work, we replace it with automation. Business process automation, test automation, and AI chatbot testing.">
+<meta property="og:url" content="https://assureailabs.netlify.app/">
+<meta property="og:image" content="https://assureailabs.netlify.app/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://assureailabs.netlify.app/">
 <meta name="description" content="AssureAI Labs replaces manual work with AI-powered automation for businesses of any size, with test automation, performance and security testing built in.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -60,6 +69,20 @@ h2{font-size:clamp(26px,3.4vw,34px);font-weight:800;color:var(--navy);margin-bot
 .links a{display:inline-block;padding:8px 16px;border-radius:9px;font-size:14px;font-weight:600;border:1.5px solid var(--navy);color:var(--navy)}
 .links a:first-child{background:var(--navy);color:#fff}
 .links a:hover{border-color:var(--teal)}
+.faq{max-width:780px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:12px}
+.faq summary{cursor:pointer;font-weight:700;color:var(--navy);font-size:16px}
+.faq details[open] summary{margin-bottom:8px}
+.faq p{color:var(--mute);font-size:15px}
+.form{max-width:560px;margin:0 auto;text-align:left;display:grid;gap:14px}
+.form label{font-size:14px;font-weight:600;color:#dbe7f7;display:grid;gap:6px}
+.form input,.form textarea{width:100%;padding:12px 14px;border-radius:10px;border:1.5px solid #2a4a7a;background:#0b2a5c;color:#fff;font:inherit}
+.form input:focus,.form textarea:focus{outline:none;border-color:var(--teal)}
+.form textarea{min-height:130px;resize:vertical}
+.form button{padding:14px 24px;border:0;border-radius:10px;background:var(--teal);color:var(--navy);font:inherit;font-weight:700;font-size:16px;cursor:pointer}
+.form button:hover{filter:brightness(1.08)}
+.alt-mail{margin-top:22px;color:#b8cde9;font-size:15px}
+.alt-mail a{color:var(--teal);font-weight:600}
 footer{background:#081628;color:#7f98ba;text-align:center;padding:22px;font-size:13px}
 </style>
 </head>
@@ -68,7 +91,7 @@ footer{background:#081628;color:#7f98ba;text-align:center;padding:22px;font-size
   <a class="logo" href="#top" aria-label="AssureAI Labs">
     <img src="logo-header.png" alt="AssureAI Labs" width="188" height="60">
   </a>
-  <nav><a href="#services">Services</a><a href="#work">Sample work</a><a href="#process">Process</a><a href="#about">About</a><a href="#certs">Certifications</a><a href="#contact">Contact</a></nav>
+  <nav><a href="#services">Services</a><a href="#work">Sample work</a><a href="#process">Process</a><a href="#about">About</a><a href="#certs">Certifications</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
 </div></header>
 
 <main id="top">
@@ -148,11 +171,30 @@ footer{background:#081628;color:#7f98ba;text-align:center;padding:22px;font-size
   </div>
 </div></section>
 
+<section class="alt" id="faq"><div class="wrap faq">
+  <h2>Frequently asked questions</h2>
+  <p class="sub">Quick answers before you get in touch.</p>
+  <details><summary>What kind of work can you automate?</summary><p>Repetitive tasks such as report building, Excel and file processing, collecting data from public websites, browser tasks and scheduled jobs. If you do it by hand more than a few times a week, it is a good candidate.</p></details>
+  <details><summary>I run a small business. Is this for me?</summary><p>Yes. Small, clearly scoped tasks are a good place to start. We work with businesses of any size.</p></details>
+  <details><summary>What do you need from me to give a quote?</summary><p>A short description of the task, a sample file or link, and the output you want. We reply with scope, price and timeline before any work starts.</p></details>
+  <details><summary>How do you price?</summary><p>Fixed price for small tasks, hourly or a monthly retainer for ongoing work. You always see the scope and price in writing first.</p></details>
+  <details><summary>Is my data safe?</summary><p>Your files and data stay yours and are used only for your project. We are happy to sign an NDA, and we only work with public data or data you are allowed to use.</p></details>
+  <details><summary>Do you also test software?</summary><p>Yes. Test automation (Playwright, Selenium), performance and security testing, and evaluation of AI chatbots and RAG apps are all part of what we do.</p></details>
+  <details><summary>What happens after delivery?</summary><p>You get documented code and a short usage guide, plus one round of fixes. Ongoing support is available if you want it.</p></details>
+</div></section>
+
 <section class="contact" id="contact"><div class="wrap">
-  <h2>Let's test your app</h2>
-  <p class="sub">Tell us about your product and get a free initial review of your test approach.</p>
-  <a class="mail" href="mailto:hello@assureailabs.in">hello@assureailabs.in</a>
-  <p class="note">Replace this address with your real business email once it is set up.</p>
+  <h2>Tell us what to automate</h2>
+  <p class="sub">Describe the manual task or the app you want tested. We reply with a scope and a quote.</p>
+  <form class="form" name="contact" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="contact">
+    <p hidden><label>Do not fill this out: <input name="bot-field"></label></p>
+    <label>Your name<input type="text" name="name" required autocomplete="name"></label>
+    <label>Your email<input type="email" name="email" required autocomplete="email"></label>
+    <label>What do you want to automate or test?<textarea name="message" required></textarea></label>
+    <button type="submit">Send message</button>
+  </form>
+  <p class="alt-mail">Prefer email? <a href="mailto:__CONTACT_EMAIL__">__CONTACT_EMAIL__</a></p>
 </div></section>
 </main>
 <footer>© 2026 AssureAI Labs. All rights reserved.</footer>
